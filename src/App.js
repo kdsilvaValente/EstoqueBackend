@@ -8,10 +8,10 @@ app.get("", (req, res) => {
   });
 });
 
-app.get("/cadastro", (req, res) => {
+app.get("/teste", (req, res) => {
   return res.json({
-    message: "Função de cadastro",
+    message: "Função de teste",
   });
 });
 
-app.listen(8000, () => console.log("Servidor Rodando"));
+module.exports = app;
