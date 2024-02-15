@@ -1,17 +1,8 @@
 const express = require("express");
-
+const rotas = require("./routes");
 const app = express();
 
-app.get("", (req, res) => {
-  return res.json({
-    message: "Hello world",
-  });
-});
-
-app.get("/teste", (req, res) => {
-  return res.json({
-    message: "Função de teste",
-  });
-});
+app.use(express.json());
+app.use(rotas);
 
 module.exports = app;
